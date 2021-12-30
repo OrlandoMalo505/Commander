@@ -16,12 +16,11 @@ namespace Commander.Controllers
             _repository = repository;
 
         }
-        //private readonly MockCommanderRepo _repository = new MockCommanderRepo();
-
+        
         [HttpGet]
         public ActionResult<IEnumerable<Command>> GetAllCommands()
         {
-            var commands= _repository.GetAppCommands();
+            var commands= _repository.GetAllCommands();
             return Ok(commands);
         }
 
